@@ -19,7 +19,7 @@
 extern "C" {
 #endif
 
-#define MAX_LAG_BUFFERS 64
+#define MAX_LAG_BUFFERS 25
 
 struct lookahead_entry {
   YV12_BUFFER_CONFIG img;
