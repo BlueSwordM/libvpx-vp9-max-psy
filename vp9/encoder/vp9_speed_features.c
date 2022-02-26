@@ -51,7 +51,7 @@ static BLOCK_SIZE set_partition_min_limit(VP9_COMMON *const cm) {
     return BLOCK_4X4;
   } else {
     // Formats 1080P and up
-    return BLOCK_8x8;
+    return BLOCK_8X8;
   }
 }
 
