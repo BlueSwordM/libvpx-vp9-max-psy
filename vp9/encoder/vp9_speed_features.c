@@ -49,15 +49,12 @@ static BLOCK_SIZE set_partition_min_limit(VP9_COMMON *const cm) {
   unsigned int screen_area = (cm->width * cm->height);
 
   // Select block size based on image format size.
-  if (screen_area < 1280 * 720) {
+  if (screen_area <= 1920 * 1080) {
     // Formats smaller in area than 720P
     return BLOCK_4X4;
-  } else if (screen_area < 1920 * 1080) {
-    // Format >= 720P and < 1080P
-    return BLOCK_8X8;
   } else {
     // Formats 1080P and up
-    return BLOCK_16X16;
+    return BLOCK_8X8;
   }
 }
 
